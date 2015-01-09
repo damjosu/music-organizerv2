@@ -115,5 +115,19 @@ public class MusicOrganizer
         {
             System.out.println("It isn't on the list");
         }
-    }     
+    } 
+    
+    /**
+     * If the artist given is on the list, plays a sample of his songs.
+     */    
+    public void artistSample(String artist)
+    {
+        for(String search : files)
+        {
+            if (search.contains(artist))
+            {
+                player.playSample(search);
+            }
+        }        
+    }
 }
