@@ -110,5 +110,10 @@ public class MusicOrganizer
                 System.out.println(filename);
             }            
         } 
+        
+        if (onTheList = false)        
+        {
+            System.out.println("It isn't on the list");
+        }
     }     
 }
