@@ -82,9 +82,9 @@ public class MusicOrganizer
     {
         player.stop();
     }
-    
+
     /**
-     * realiza una impresion del listado de las canciones guardadas
+     * Prints all the saved songs.
      */
     public void listAllFiles()
     {
@@ -95,4 +95,20 @@ public class MusicOrganizer
             count++;
         }
     }
+
+    /**
+     * List the files with the same String you typed.
+     */
+    public void listMaching(String artist)
+    {
+        boolean onTheList = false;
+        for (String filename : files)
+        {
+            if (filename.contains(artist))
+            {
+                onTheList = true;
+                System.out.println(filename);
+            }            
+        } 
+    }     
 }
