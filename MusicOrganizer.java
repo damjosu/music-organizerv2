@@ -130,4 +130,36 @@ public class MusicOrganizer
             }
         }        
     }
+    
+    /**
+     * Finds the first match of the given text and returns its index.
+     */
+    public int findFirst(String search)
+    {
+        boolean found = false;
+        int index = 0;
+        while (!found && index < files.size())
+        {
+            String filename = files.get(index);
+            if (filename.contains(search))
+            {
+                found = true;
+            }
+            else
+            {
+                index++;
+            }
+            
+        }
+        
+        if (found)
+        {
+            return index;
+        }
+        else
+        {
+            return -1;
+        }
+        
+    }
 }
